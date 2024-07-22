@@ -2,41 +2,51 @@ class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
   def index
-    @books = Book.all.order(:id)
+    @books = Book.all
     @book = Book.new
   end
 
   def create
     @book = Book.new(book_params)
     if @book.save
-      redirect_to books_path, notice: 'Book was successfully created.'
+      # DBへの保存成功
+      flash[:success] = "Book was successfully created."
+      redirect_to book_path(@book)
     else
-      @books = Book.all.order(:id)
-      render :index
+      # DBへの保存失敗
+      @books = Book.all
+      render "index"
     end
   end
 
   def show
+    # @bookはbefore_action :set_bookで設定されています
   end
 
   def edit
+    # @bookはbefore_action :set_bookで設定されています
   end
 
   def update
     if @book.update(book_params)
-      redirect_to @book, notice: 'Book was successfully updated.'
+      # DBの更新成功
+      flash[:success] = "Book was successfully updated."
+      redirect_to book_path(@book)
     else
-      render :edit
+      # DBの更新失敗
+      render "edit"
     end
   end
 
   def destroy
-    @book.destroy
-    redirect_to books_path, notice: 'Book was successfully destroyed.'
-  end
+  @book = Book.find(params[:id])
+  @book.destroy
+  flash[:success] = "Book was successfully destroyed."
+  redirect_to books_pa
+end
+
 
   private
-
   def set_book
     @book = Book.find(params[:id])
   end
