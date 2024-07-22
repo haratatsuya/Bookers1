@@ -163,7 +163,11 @@ GEM
     rb-inotify (0.11.1)
       ffi (~> 1.0)
     regexp_parser (2.9.2)
+<<<<<<< HEAD
     rexml (3.3.2)
+=======
+    rexml (3.3.1)
+>>>>>>> 8de91e6ac3c8246bd5cc4f6844c5d7e9449c476e
       strscan
     rubyzip (2.3.2)
     sass-rails (6.0.0)
@@ -215,7 +219,11 @@ GEM
       rack-proxy (>= 0.6.1)
       railties (>= 5.2)
       semantic_range (>= 2.3.0)
+<<<<<<< HEAD
     websocket (1.2.11)
+=======
+    websocket (1.2.10)
+>>>>>>> 8de91e6ac3c8246bd5cc4f6844c5d7e9449c476e
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)

@@ -28,6 +28,10 @@ Rails.application.configure do
     config.action_controller.perform_caching = false
 
     config.cache_store = :null_store
+<<<<<<< HEAD
+=======
+    config.hosts << "54657fd7a78b4b13898992f50eb5be8a.vfs.cloud9.ap-northeast-1.amazonaws.com"
+>>>>>>> 8de91e6ac3c8246bd5cc4f6844c5d7e9449c476e
   end
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
@@ -73,5 +77,8 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+<<<<<<< HEAD
   config.hosts << "54657fd7a78b4b13898992f50eb5be8a.vfs.cloud9.ap-northeast-1.amazonaws.com"
+=======
+>>>>>>> 8de91e6ac3c8246bd5cc4f6844c5d7e9449c476e
 end
